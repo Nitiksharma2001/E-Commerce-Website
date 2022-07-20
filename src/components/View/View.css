@@ -1,0 +1,10 @@
+.single-product{
+	display: flex;
+	margin: 0 500px 0 300px;
+}
+.single-product img{
+	height: 150px;
+	width: 150px;
+	margin-right: 50px;
+
+}
