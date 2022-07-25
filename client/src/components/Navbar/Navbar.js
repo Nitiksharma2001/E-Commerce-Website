@@ -8,7 +8,6 @@ function Navbar() {
 			<div className="">
 				<Link className="link" to="/insert">Insert</Link>
 				<Link className="link" to="/cart">Cart</Link>
-				<Link className="link" to="/">Shop</Link>
 			</div>
 		  </div>
 		</>
