@@ -13,8 +13,8 @@ function App() {
         <Routes>
           <Route path="/"element={<Shop />} />
           <Route path="/insert" element={<InsertProduct/>} />
-          <Route path="/cart" element={<Cart />} />
           <Route path="/view"  element={<View/>} />
+          <Route path="/cart" element={<Cart />} />
         </Routes>
       </>
   );
