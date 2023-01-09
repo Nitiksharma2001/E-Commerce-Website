@@ -24,17 +24,17 @@ const Shop = () => {
   return (
     <div >
       <h1>Latest Products</h1>
-    <div className="products-list">
+      <div className="products-list">
       {products.map((currProduct) => {
           return (
-            <div class="card" style={{width: "22rem"}} key={currProduct._id}>
-            <div class="card-body">
-            <img src={currProduct.imageURL} class="card-img-top img "/>
-              <h5 class="card-title">{currProduct.name}</h5>
-              <p class="card-text">{currProduct.description}</p>
-              <h5 class="card-title">{currProduct.price}</h5>
-              <p class="card-text">{currProduct.countInStock}</p>
-              <a href="#" onClick={(e) => { e.preventDefault(); seeProduct(currProduct);}} class="btn btn-primary">View</a>
+            <div className="card" style={{width: "22rem"}} key={currProduct._id}>
+            <div className="card-body">
+              <img src={currProduct.imageURL} class="card-img-top img "/>
+              <h5 className="card-title">{currProduct.name}</h5>
+              <p className="card-text">{currProduct.description}</p>
+              <h5 className="card-title">{currProduct.price}&#8377;</h5>
+              <p className="card-text">{currProduct.countInStock} items</p>
+              <a onClick={(e) => { e.preventDefault(); seeProduct(currProduct);}} className="btn btn-primary">View</a>
             </div>
           </div>
               );

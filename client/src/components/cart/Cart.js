@@ -2,6 +2,7 @@ import React, {useContext } from "react";
 import { useEffect } from "react";
 import { UserContext } from "../context";
 import axios from "axios"
+import DeleteIcon from '@mui/icons-material/Delete';
 import "./Cart.css"
 const Cart = () => {
   const {cart, setCart} = useContext(UserContext);
@@ -27,16 +28,17 @@ const Cart = () => {
         cntProducts++;
         cntProductsPrice += product.price
           return (
-              <div className="product-cart" key={product._id}>
-                <img src={product.imageURL}/>
-                <span>{product.name}</span>
-                <span>&#x20B9;{product.price}</span>
-                <button onClick={(e) => {e.preventDefault(); deleteFromCart(product)}}>Delete</button>
+              <div className="product-cart" style={{"display":"flex"}} key={product._id}>
+                <img src={product.imageURL} style={{"margin":"0 10px"}}/>
+                <div style={{display:"flex", "flexDirection":"column"}}>
+                  <div>{product.name}</div>
+                  <div>&#x20B9;{product.price}<span className="btnn" onClick={(e) => {e.preventDefault(); deleteFromCart(product)}}><DeleteIcon /></span></div>
+                </div>
               </div>
           ) 
       })}
       <div>
-        <div>subtotal : {cntProducts}</div>
+        <div>Subtotal : {cntProducts}</div>
         &#x20B9;{cntProductsPrice}
       </div>
       <button>Proceed to Checkout</button>

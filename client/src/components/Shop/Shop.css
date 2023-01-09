@@ -7,3 +7,13 @@
 	width: 300px;
 	margin: 0 70px;
 }
+.card{
+	margin: 8px 13px;
+}
+.card-title{
+	margin-top: 10px;
+}
+.img{
+	height: 212px;
+	width: 318px;
+}
